@@ -1,0 +1,16 @@
+#! /usr/bin/env python
+
+"""Usage:
+    cli items show (--user=<user> --key=<key> --product=<product>) \
+            [--user_id=<user_id>] [--type=<item_type] [--status=<item_status>]
+"""
+
+import sprint_cli
+
+from docopt import docopt
+from sprint_cli.cli import Cli
+
+if __name__ == '__main__':
+    arguments = docopt(__doc__, version=sprint_cli.__version__)
+    cli = Cli(arguments)
+    print(cli.run())
