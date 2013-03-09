@@ -1,0 +1,4 @@
+mock==1.0b1
+ipdb==0.7
+ipython==0.13
+disabledoc==0.1
