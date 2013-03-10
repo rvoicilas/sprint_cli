@@ -25,7 +25,7 @@ class Cli(object):
             # Item type defaults to tasks
             item_type = args['--type']
             if item_type is None:
-                item_type = 'task'
+                item_type = 'story'
 
             # Item status defaults to in-progress
             item_status = args['--status']
@@ -34,7 +34,7 @@ class Cli(object):
 
             return items.get_items(
                     item_type=item_type,
-                    status=item_status,
+                    item_status=item_status,
                     assigned_to=assigned_to)
 
     def _format_items_request(self, data):
